@@ -1,6 +1,25 @@
 {
   "dependencies": {
+    "console.table": "^0.10.0",
     "inquirer": "^8.2.4",
     "mysql2": "^3.1.0"
-  }
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "employee-tracker",
+  "description": "# Table of Contents - Description - Installation Instructions - GitHub Account - Contacts - Images - Code Snippets - Resources - Credits",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ashrean/Employee-Tracker.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/ashrean/Employee-Tracker/issues"
+  },
+  "homepage": "https://github.com/ashrean/Employee-Tracker#readme"
 }
