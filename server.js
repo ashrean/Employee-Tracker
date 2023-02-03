@@ -59,8 +59,7 @@ const stateAction = () => {
                     break;
 
                 case 'Quit':
-                    quit()
-                    console.log('Database ending')
+                    console.log('Database ending');
             }
         })
 }
