@@ -27,8 +27,8 @@ const stateAction = () => {
                     'View All Departments',
                     'Add Departments',
                     'Add Employee',
-                    'Remove Employee',
                     'View All Employees',
+                    'View Roles',
                     'Add Role',
                     'Quit']
             }
@@ -42,12 +42,12 @@ const stateAction = () => {
                     addDepartments()
                     break;
 
-                case 'Add Employee':
-                    addEmployees()
+                case 'View Roles':
+                    viewAllRoles()
                     break;
 
-                case 'Remove Employee':
-                    removeEmployees()
+                case 'Add Employee':
+                    addEmployees()
                     break;
 
                 case 'View All Employees':
@@ -55,6 +55,7 @@ const stateAction = () => {
                     break
 
                 case 'Quit':
+                    quit()
                     break;
             }
         })
@@ -69,12 +70,18 @@ const viewDepartment = () =>{
 
 
 const viewAllEmployees = () =>{
-    db.query('SELECT * FROM departments', function(err, results, fields) {
+    db.query('SELECT * FROM employees', function(err, results, fields) {
         console.table(results)
         stateAction()
     })
 }
 
+const viewAllRoles = () =>{
+    db.query('SELECT * FROM roles', function(err, results, fields) {
+        console.table(results)
+        stateAction()
+    })
+}
 
 function addEmployees() {
     inquirer

@@ -5,22 +5,29 @@ VALUES
 ('Finance'),
 ('Legal');
 
-INSERT INTO roles(title, salary, departments_id)
+INSERT INTO roles(titles, salary, department_id)
 VALUES
-('Sales Lead', 200000, 1),
-('Engineering Lead', 300000, 2),
-('Finance Lead', 190000, 3),
-('Legal Lead', 190000, 4);
+('Sales Manager', 200000, 1),
+('Salesperson', 115000, 1),
+('Engineering Manager', 300000, 2),
+('Software Engineer', 120000, 2),
+('Finance Manager', 190000, 3),
+('Accoutant', 115000, 3),
+('Legal Manager', 190000, 4),
+('Lawyer', 130000, 4);
 
 
-INSERT INTO employees(first_name, last_name, roles_id)
+
+INSERT INTO employees(first_name, last_name, titles, manager_id)
 VALUES
-('Beau', 'Jangles', 1),
-('Chico', 'Bean', 2),
-('Ashley', 'Sese', 3),
-('Steven', 'Lin', 4);
+('Beau', 'Jangles', 'Sales Manager', 1),
+('Damian', 'Lin', 'Engineering Manager', 2),
+('Avery', 'Soriano', 'Finance Manager', 3),
+('Selena', 'Lew', 'Legal Manager', 4);
 
-
-INSERT INTO employees(first_name, last_name, roles_id, manager_id)
+INSERT INTO employees(first_name, last_name, titles, roles_id, manager_id)
 VALUES
-('Pikachu', 'Catchum', 1, 1);
+('Jordan', 'Poole', 'Salesperson', 1, 1),
+('Vince', 'Carter', 'Software Engineer', 2, 2),
+('Steph', 'Curry', 'Accountant', 3, 3),
+('Klay', 'Thompson', 'Lawyer', 4, 4);
