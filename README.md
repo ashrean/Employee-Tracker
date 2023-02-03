@@ -60,3 +60,5 @@ VALUES
 - [Inquirer](https://www.npmjs.com/package/inquirer/v/8.2.4)
 
 # Credits
+- Josshy O. (Tutor)
+
