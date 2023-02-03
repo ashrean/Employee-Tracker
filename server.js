@@ -28,7 +28,7 @@ const stateAction = () => {
                     'Add Departments',
                     'Add Employee',
                     'Remove Employee',
-                    'View All Emoloyees',
+                    'View All Employees',
                     'Add Role',
                     'Quit']
             }
@@ -91,7 +91,7 @@ function addEmployees() {
             },
             {
                 type: 'input',
-                message: 'What is your role ID number',
+                message: 'What is your managers ID number',
                 name: 'roleID',
                 validate: (answer) => {
                     if (isNaN(answer)) {
