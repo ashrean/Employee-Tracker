@@ -1,14 +1,16 @@
 # Employee Tracker
 
 # Table of Contents
+- [Employee Tracker](#employee-tracker)
+- [Table of Contents](#table-of-contents)
 - [Description](#description)
-- Installation Instructions
-- GitHub Account
-- Contacts
-- Images
-- Code Snippets
-- Resources
-- Credits
+- [Installtion Instructions](#installtion-instructions)
+- [Github Account](#github-account)
+- [Images](#images)
+- [Contacts](#contacts)
+- [Code Snippets](#code-snippets)
+- [Resources](#resources)
+- [Credits](#credits)
 
 
 # Description
@@ -23,7 +25,7 @@ along with the Employees and the associated job salaries.
 - To run this application
   - In your local terminal type `npm start`
   - Then run `node server.js`
-  - The prompts will show up then answer the following questions. 
+  - The prompts will show up then answer the following questions.
 
 # Github Account
 - [GitHub](https://github.com/ashrean)
@@ -37,6 +39,8 @@ along with the Employees and the associated job salaries.
 - [Linkedin](https://www.linkedin.com/in/ashleyrean/)
 
 # Code Snippets
+- This snippet shows the roles table which is the child of the parent table called "departments". The
+table contains the following information of the title from the department, salary and the id.
 ```
 INSERT INTO roles(titles, salary, department_id)
 VALUES
