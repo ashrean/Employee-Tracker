@@ -14,7 +14,7 @@
 
 
 # Description
-This application was created to show the comapany's database, you will see tables from the Departments, then from there you can see the roles
+This application was created to show the comapany's database, you will see tables from the Departments, then from there you can see the Roles
 along with the Employees and the associated job salaries.
 
 # Installtion Instructions
@@ -29,7 +29,7 @@ along with the Employees and the associated job salaries.
 
 # Github Account
 - [GitHub](https://github.com/ashrean)
-- [Video Link]()
+- [Video Link](https://drive.google.com/file/d/1BgjOIfyu2Kj-KvRZWGaEtEtQRU6egr-I/view)
 
 # Images
 ![alt text](./assets/Screenshot%202023-02-02%20at%2010.23.01%20PM.png)
