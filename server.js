@@ -26,8 +26,8 @@ const stateAction = () => {
                     // Add the rest of it later(dont forget to add view employees)
                     'View All Departments',
                     'Add Departments',
-                    'Add Employee',
                     'View All Employees',
+                    'Add Employee',
                     'View Roles',
                     'Add Role',
                     'Quit']
@@ -46,17 +46,21 @@ const stateAction = () => {
                     viewAllRoles()
                     break;
 
+                case 'Add Role':
+                    addRole()
+                    break;
+
                 case 'Add Employee':
                     addEmployees()
                     break;
 
                 case 'View All Employees':
                     viewAllEmployees()
-                    break
+                    break;
 
                 case 'Quit':
                     quit()
-                    break;
+                    console.log('Database ending')
             }
         })
 }
@@ -98,8 +102,13 @@ function addEmployees() {
             },
             {
                 type: 'input',
+                message: 'What is your role?',
+                name: 'employeeRole'
+            },
+            {
+                type: 'input',
                 message: 'What is your managers ID number',
-                name: 'roleID',
+                name: 'managerID',
                 validate: (answer) => {
                     if (isNaN(answer)) {
                         return `You did not enter a valid number.`
@@ -113,7 +122,11 @@ function addEmployees() {
         ])
         .then((response)=>{
             db.query('INSERT INTO employees SET ?;', {
-                first_name: response.firstName
+                first_name: response.firstName,
+                last_name: response.lastName,
+                titles: response.employeeRole,
+                manager_id: response.managerID,
+
          });
          stateAction();
         })
@@ -131,6 +144,37 @@ function addDepartments() {
         .then((response)=>{
             db.query('INSERT INTO departments SET ?;', {
                 name: response.addingDepartment
+         });
+         stateAction();
+        })
+}
+
+
+function addRole() {
+    inquirer
+        .prompt([
+            {
+                type: 'input',
+                message: 'What role would you like to add?',
+                name: 'addingRole'
+            },
+            {
+                type: 'input',
+                message: 'What is the salary for this role?',
+                name: 'salaryRole'
+            },
+            {
+                type: 'input',
+                message: 'What is the department id for this role?',
+                name: 'departmentID',
+            },
+
+        ])
+        .then((response)=>{
+            db.query('INSERT INTO roles SET ?;', {
+                titles: response.addingRole,
+                salary: response.salaryRole,
+                department_id:response.departmentID
          });
          stateAction();
         })
