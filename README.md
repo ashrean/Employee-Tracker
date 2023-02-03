@@ -24,7 +24,7 @@ along with the Employees and the associated job salaries.
   - To view the tables type `SELECT * FROM tablename;`
 - To run this application
   - In your local terminal type `npm start`
-  - Then run `node server.js`
+  - Then it will run `node server.js` automatically
   - The prompts will show up then answer the following questions.
 
 # Github Account
@@ -61,4 +61,3 @@ VALUES
 
 # Credits
 - Josshy O. (Tutor)
-
